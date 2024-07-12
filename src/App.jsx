@@ -3,18 +3,27 @@ import { useState } from "react";
 
 function App() {
 
-  const [title, setTitle] = useState("My name is Aadarsh");
+  return (
+    <div>
+      <Firsthandler></Firsthandler>
+      <Header title="I am from Dondaicha"></Header>
+    </div>
+  )
+}
+
+function Firsthandler() {
+
+  const [first, setFirst] = useState("My name is Aadarsh");
 
   function onClickHandler() {
-    setTitle("My name is " + Math.random());
+    setFirst("My name is " + Math.random());
   }
 
   return (
     <div>
       <button onClick={onClickHandler}>Change title</button> <br />
-      <Header title={title}></Header>
+      <Header title={first}></Header>
       <br />
-      <Header title="I am from Dondaicha"></Header>
     </div>
   )
 }
