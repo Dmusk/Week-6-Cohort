@@ -2,39 +2,26 @@ import React from "react"
 
 function App() {
 
-  return (
-    <div>
-      <CardWrapper innerComponent={<TextComponent />} />
-      <CardWrapper innerComponent={<ImageComponent />} />
-    </div>
-  )
-}
-
-
-function TextComponent() {
   return <div>
-    Hi there
-  </div>
-}
-
-function ImageComponent() {
-  return <div>
-    My Photo
+    <Card>
+      Hello
+    </Card>
+    <Card>
+      <div>
+        I am Second Compomet
+      </div>
+    </Card>
   </div>
 }
 
 
-function CardWrapper({ innerComponent }) {
+function Card({ children }) {
 
   return <div style={{
     border: "2px solid black", padding: 200
   }}>
-    {innerComponent}
+    {children}
   </div>
 }
-
-
-
-
 
 export default App
